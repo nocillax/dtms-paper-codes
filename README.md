@@ -2,6 +2,22 @@
 
 This repository contains the complete experimental harness, telemetry pipeline, and parsing scripts to reproduce the findings presented in the DTMS course project. It compares the Write Amplification Factor (WAF) and throughput of WiredTiger (B-Tree) and RocksDB (LSM-Tree).
 
+## Repository Structure
+
+```text
+.
+├── scripts/
+│   ├── setup_env.sh
+│   ├── build_engines.sh
+│   ├── 03_telemetry_daemon.py
+│   ├── 04_run_suite.py
+│   └── 05_parse_and_plot.py
+├── results/
+│   ├── raw_logs/      # Output logs containing operations/sec
+│   ├── telemetry/     # 2-second interval NVMe CSV data
+│   └── figures/       # Generated matplotlib charts
+└── README.md
+
 ## System Requirements
 
 - **OS:** Linux (Ubuntu 22.04 / Pop!_OS 22.04 recommended)
@@ -26,7 +42,7 @@ bash scripts/build_engines.sh
 ```
 
 **3. Execute the Benchmark Suite:**
-This will run the 12-hour workload suite (Uniform, Standard Zipfian, Extreme Zipfian 2-hours for each of them for the 2 engines) for both engines while safely polling the NVMe SMART logs in the background. (Adjust the value in the `run_suite.py` from 7200 to to lower the experiment duration) 
+This will run the 12-hour workload suite (Uniform, Standard Zipfian, Extreme Zipfian 2-hours for each of them for the 2 engines) for both engines while safely polling the NVMe SMART logs in the background. (Adjust the duration value in scripts/run_suite.py to lower the experiment runtime).
 
 Bash
 
@@ -43,4 +59,17 @@ Bash
 python3 scripts/parse_and_plot.py
 ```
 
-Results, including the raw engine logs, telemetry CSVs, and final figures, will be exported to the `results/` directory.
+Results, including the raw engine logs, telemetry CSVs, and final figures, will be exported to the `results/` directory. 
+_(Note: The results of the primary experiment are already available in the results folder)._
+
+## License
+
+This project is open-source and available under the MIT License.
+
+## Author
+
+**Md. Asif Chowdhury**
+B.Sc. in Computer Science & Engineering
+American International University-Bangladesh
+Email: [asifjarif@gmail.com]
+GitHub: @nocillax
