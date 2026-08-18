@@ -69,7 +69,11 @@ This project is open-source and available under the MIT License.
 ## Author
 
 **Md. Asif Chowdhury**
+
 B.Sc. in Computer Science & Engineering
-American International University-Bangladesh
+
+American International University-Bangladesh (AIUB)
+
 Email: [asifjarif@gmail.com]
+
 GitHub: @nocillax
