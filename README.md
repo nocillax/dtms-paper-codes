@@ -9,9 +9,9 @@ This repository contains the complete experimental harness, telemetry pipeline, 
 ├── scripts/
 │   ├── setup_env.sh
 │   ├── build_engines.sh
-│   ├── 03_telemetry_daemon.py
-│   ├── 04_run_suite.py
-│   └── 05_parse_and_plot.py
+│   ├── telemetry_daemon.py
+│   ├── run_suite.py
+│   └── parse_and_plot.py
 ├── results/
 │   ├── raw_logs/      # Output logs containing operations/sec
 │   ├── telemetry/     # 2-second interval NVMe CSV data
