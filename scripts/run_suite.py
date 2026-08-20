@@ -13,8 +13,7 @@ LOG_DIR = os.path.join(REPO_ROOT, "results/raw_logs")
 TEL_DIR = os.path.join(REPO_ROOT, "results/telemetry")
 
 # FAULT TOLERANCE CHECKLIST:
-# If the power goes out, simply put a '#' at the start of the lines that 
-# already finished successfully. The script will only run the uncommented ones.
+# To run specific ones only, comment out the rest.
 TEST_SUITE = [
     {"engine": "rocksdb",    "skew_name": "uniform",          "param": 0.0,  "duration": 7200},
     {"engine": "wiredtiger", "skew_name": "uniform",          "param": 0,    "duration": 7200},
