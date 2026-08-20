@@ -17,9 +17,7 @@ FIG_DIR = os.path.join(REPO_ROOT, "results/figures")
 
 os.makedirs(FIG_DIR, exist_ok=True)
 
-print("\n==============================================================")
-print("             EXPERIMENT FINAL SUMMARY TABLE")
-print("==============================================================\n")
+print("EXPERIMENT FINAL SUMMARY TABLE")
 
 # 1. Parse RocksDB
 rocksdb_metrics = {}
